@@ -414,7 +414,7 @@
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="Autor_Libros" msdata:parent="Autor" msdata:child="Libros" msdata:parentkey="CodigoAutor" msdata:childkey="CodigoAutor" msprop:Generator_UserParentTable="Autor" msprop:Generator_UserChildTable="Libros" msprop:Generator_RelationVarName="relationAutor_Libros" msprop:Generator_ChildPropName="GetLibrosRows" msprop:Generator_ParentPropName="AutorRow" msprop:Generator_UserRelationName="Autor_Libros" />
+      <msdata:Relationship name="Autor_Libros" msdata:parent="Autor" msdata:child="Libros" msdata:parentkey="CodigoAutor" msdata:childkey="CodigoAutor" msprop:Generator_UserParentTable="Autor" msprop:Generator_UserChildTable="Libros" msprop:Generator_RelationVarName="relationAutor_Libros" msprop:Generator_ChildPropName="GetLibrosRows" msprop:Generator_UserRelationName="Autor_Libros" msprop:Generator_ParentPropName="AutorRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

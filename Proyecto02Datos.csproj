@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="fmAcercade.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="fmAcercade.designer.cs">
+      <DependentUpon>fmAcercade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmConsulta.Designer.cs">
+      <DependentUpon>fmConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmMaestroDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmMaestroDetalle.Designer.cs">
+      <DependentUpon>fmMaestroDetalle.cs</DependentUpon>
     </Compile>
     <Compile Include="librosDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -59,8 +71,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="fmAcercade.resx">
+      <DependentUpon>fmAcercade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmConsulta.resx">
+      <DependentUpon>fmConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmMaestroDetalle.resx">
+      <DependentUpon>fmMaestroDetalle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -70,6 +88,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="librosDataSet.xsc">
       <DependentUpon>librosDataSet.xsd</DependentUpon>
@@ -94,6 +113,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\desarrollo-web.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
