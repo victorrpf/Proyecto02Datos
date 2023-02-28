@@ -61,17 +61,23 @@ namespace Proyecto02Datos
 
         private void librosDataGridView_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            stEstado.Items[1].Text = "Número de libros de este autor: "+ librosDataGridView.RowCount;
-
-            float totPrecio = 0;
-            for (int i = 0; i <= librosDataGridView.RowCount - 1; i++)
+            if (librosDataGridView.RowCount > 0)
             {
-                totPrecio += Convert.ToInt16(librosDataGridView.Rows[i].Cells[8].Value);
-            } // Asegurarse de que el precio está en la columna 8
+                stEstado.Items[1].Text = "Número de libros de este autor: "+ librosDataGridView.RowCount;
 
-            stEstado.Items[3].Text = "Suma de precios: "+ totPrecio;
+                float totPrecio = 0;
+                for (int i = 0; i <= librosDataGridView.RowCount - 1; i++)
+                {
+                    totPrecio += Convert.ToInt16(librosDataGridView.Rows[i].Cells[8].Value);
+                } // Asegurarse de que el precio está en la columna 8
 
-            stEstado.Items[5].Text = "Media de precios: " + totPrecio / librosDataGridView.RowCount;
+                stEstado.Items[3].Text = "Suma de precios: "+ totPrecio;
+
+                stEstado.Items[5].Text = "Media de precios: " + totPrecio / librosDataGridView.RowCount;
+            }else{
+                stEstado.Items[1].Text = "Número de libros de este autor: " + librosDataGridView.RowCount;
+                stEstado.Items[3].Text = stEstado.Items[5].Text = "";
+            }
         }
     }
 }

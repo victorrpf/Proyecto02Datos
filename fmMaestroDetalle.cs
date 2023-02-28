@@ -101,6 +101,11 @@ namespace Proyecto02Datos
 
         private void bindingNavigatorDeleteItem_MouseDown(object sender, MouseEventArgs e)
         {
+            if(librosDataGridView.Rows.Count > 0)
+            {
+                MessageBox.Show("Este autor tiene " + librosDataGridView.Rows.Count.ToString() + " libros. No se puede borrar.");
+                return;
+            }
             DialogResult resultado = MessageBox.Show("Seguro que deseas Borrar? "
                 + nombreTextBox.Text, "Borrar Datos", MessageBoxButtons.YesNo);
             if (resultado == DialogResult.No)
@@ -120,8 +125,8 @@ namespace Proyecto02Datos
             }
             
             bindingNavigatorAddNewItem1.Enabled = false; //Mientras se añade, si se
-                                                        // vuelve a pulsar dará excepción, deshabilitado no se puede
-
+                                                         // vuelve a pulsar dará excepción, deshabilitado no se puede
+            autorBindingNavigator.Enabled = false;
             edicionLibro = true;
         }
 
@@ -148,6 +153,7 @@ namespace Proyecto02Datos
         private void bindingNavigatorDeleteItem1_Click(object sender, EventArgs e)
         {
             bindingNavigatorAddNewItem1.Enabled = true;
+            autorBindingNavigator.Enabled = true;
             edicionLibro = false;
             librosTableAdapter.Update(librosDataSet.Libros);
         }
@@ -180,6 +186,7 @@ namespace Proyecto02Datos
                     this.tableAdapterManager.UpdateAll(this.librosDataSet); //Actualiza
                                                                             // los cambios en el DataSet
                     bindingNavigatorAddNewItem1.Enabled = true;
+                    autorBindingNavigator.Enabled = true;
                 }
                 catch (ConstraintException ex)
                 {
