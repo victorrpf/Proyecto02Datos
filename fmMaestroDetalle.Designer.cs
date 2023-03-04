@@ -55,9 +55,10 @@
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.autorBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.acercaDeOption = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.consultaOption = new System.Windows.Forms.ToolStripLabel();
             this.stEstado = new System.Windows.Forms.StatusStrip();
             this.stEstadoItem0 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -99,7 +100,6 @@
             this.Editorial = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.editorialBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             codigoAutorLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             ciudadLabel = new System.Windows.Forms.Label();
@@ -193,6 +193,7 @@
             this.comentarioTextBox.Location = new System.Drawing.Point(820, 53);
             this.comentarioTextBox.Multiline = true;
             this.comentarioTextBox.Name = "comentarioTextBox";
+            this.comentarioTextBox.ReadOnly = true;
             this.comentarioTextBox.Size = new System.Drawing.Size(251, 87);
             this.comentarioTextBox.TabIndex = 10;
             // 
@@ -211,6 +212,7 @@
             this.nacionalidadTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.autorBindingSource, "Nacionalidad", true));
             this.nacionalidadTextBox.Location = new System.Drawing.Point(422, 99);
             this.nacionalidadTextBox.Name = "nacionalidadTextBox";
+            this.nacionalidadTextBox.ReadOnly = true;
             this.nacionalidadTextBox.Size = new System.Drawing.Size(200, 22);
             this.nacionalidadTextBox.TabIndex = 8;
             // 
@@ -219,6 +221,7 @@
             this.ciudadTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.autorBindingSource, "Ciudad", true));
             this.ciudadTextBox.Location = new System.Drawing.Point(140, 99);
             this.ciudadTextBox.Name = "ciudadTextBox";
+            this.ciudadTextBox.ReadOnly = true;
             this.ciudadTextBox.Size = new System.Drawing.Size(116, 22);
             this.ciudadTextBox.TabIndex = 6;
             // 
@@ -227,6 +230,7 @@
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.autorBindingSource, "Nombre", true));
             this.nombreTextBox.Location = new System.Drawing.Point(360, 53);
             this.nombreTextBox.Name = "nombreTextBox";
+            this.nombreTextBox.ReadOnly = true;
             this.nombreTextBox.Size = new System.Drawing.Size(325, 22);
             this.nombreTextBox.TabIndex = 5;
             // 
@@ -235,7 +239,6 @@
             this.codigoAutorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.autorBindingSource, "CodigoAutor", true));
             this.codigoAutorTextBox.Location = new System.Drawing.Point(173, 53);
             this.codigoAutorTextBox.Name = "codigoAutorTextBox";
-            this.codigoAutorTextBox.ReadOnly = true;
             this.codigoAutorTextBox.Size = new System.Drawing.Size(48, 22);
             this.codigoAutorTextBox.TabIndex = 4;
             // 
@@ -357,10 +360,10 @@
             this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
-            // bindingNavigatorSeparator2
+            // toolStripSeparator1
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // autorBindingNavigatorSaveItem
             // 
@@ -377,6 +380,11 @@
             this.acercaDeOption.Size = new System.Drawing.Size(75, 24);
             this.acercaDeOption.Text = "Acerca de";
             this.acercaDeOption.Click += new System.EventHandler(this.acercaDeOption_Click);
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // consultaOption
             // 
@@ -735,11 +743,6 @@
             this.precioDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
             this.precioDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // fmMaestroDetalle
             // 
